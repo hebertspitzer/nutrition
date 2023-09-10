@@ -8,32 +8,32 @@ function App() {
 
   const group = [
     {
-      name: "Fruta",
+      name: "Café da manha",
       primaryColor: "#57C278",
       secondaryColor: "#d9f7e9"
     },
     {
-      name: "Carnes",
+      name: "Almoço",
       primaryColor: "#82CFFA",
       secondaryColor: "#E8F8FF"
     },
     {
-      name: "Hortaliças",
+      name: "Café da tarde",
       primaryColor: "#A6D157",
       secondaryColor: "#F0F8E2"
     },
     {
-      name: "Açúcares e doces",
+      name: "Janta",
       primaryColor: "#E06B69",
       secondaryColor: "#FDE7E8"
     },
     {
-      name: "Óleos e gorduras",
+      name: "Ceia",
       primaryColor: "#DB6EBF",
       secondaryColor: "#FAE9F5"
     },
     {
-      name: "Leite e derivados",
+      name: "Outros",
       primaryColor: "#FFBA05",
       secondaryColor: "#FFF5D9"
     }

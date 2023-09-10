@@ -13,14 +13,10 @@ import FormLabel from '@mui/material/FormLabel';
 
 const FormFood = (props) => {
 
-    const sortByName = (a, b) => {
-        return a.name < b.name ? -1 : 1
-    }
-
     const [name, setName] = useState('')
     const [calories, setCalories] = useState('')
     const [description, setDescription] = useState('')
-    const [foodGroup, setFoodGroup] = useState('')
+    const [foodGroup, setFoodGroup] = useState(props.group[0].name)
     const [typeOfMeasure, setTypeOfMeasure] = useState('Gramas')
 
 
@@ -36,7 +32,7 @@ const FormFood = (props) => {
         setName('');
         setCalories('');
         setDescription('');
-        setFoodGroup('');
+        setFoodGroup(props.group[0].name);
         setTypeOfMeasure('Gramas');
         console.log(name,calories,description,foodGroup,typeOfMeasure)
     }
@@ -80,10 +76,9 @@ const FormFood = (props) => {
                     whenChanged={value => setDescription(value)}
                 />
                 <SelectBox
-                    label='Grupo do alimento'
+                    label='Refeição'
                     itens={props.group}
                     value={foodGroup}
-                    sort={sortByName}
                     whenChanged={value => setFoodGroup(value)}
                 />
                 <Button>Enviar</Button>
