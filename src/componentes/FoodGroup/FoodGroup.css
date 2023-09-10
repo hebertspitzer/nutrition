@@ -1,0 +1,19 @@
+.foodGroup{
+    text-align: center;
+    padding: 32px;
+    background-color: #d9f7e9;
+}
+
+.foodGroup h3{
+    font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.foodGroup .foods{
+    display: flex;
+    justify-content:  space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}

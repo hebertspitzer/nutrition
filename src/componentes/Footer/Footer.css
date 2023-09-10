@@ -1,0 +1,38 @@
+.footer-page {
+    background: #008080;
+    color: #FFF;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-page ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer-page ul li:last-child {
+    margin-right: 0;
+}
+
+.logo-nutrition{
+    max-width:160px;
+    max-height:160px;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .footer-page {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px;
+    }
+    .logo-nutrition{
+        max-width:80px;
+        max-height:80px;
+        width: auto;
+        height: auto;
+    }
+}
