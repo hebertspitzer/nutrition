@@ -12,3 +12,8 @@
     padding: 36px 64px;
     box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
 }
+
+.formulario .label-medida{
+    font-size: 24px;
+    color: #000;
+}
