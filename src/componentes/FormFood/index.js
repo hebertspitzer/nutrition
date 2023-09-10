@@ -21,6 +21,8 @@ const FormFood = (props) => {
     const [calories, setCalories] = useState('')
     const [description, setDescription] = useState('')
     const [foodGroup, setFoodGroup] = useState('')
+    const [typeOfMeasure, setTypeOfMeasure] = useState('Gramas')
+
 
     const whenSaving = (event) => {
         event.preventDefault()
@@ -28,12 +30,15 @@ const FormFood = (props) => {
             name,
             calories,
             description,
-            foodGroup
+            foodGroup,
+            typeOfMeasure
         })
         setName('');
         setCalories('');
         setDescription('');
         setFoodGroup('');
+        setTypeOfMeasure('Gramas');
+        console.log(name,calories,description,foodGroup,typeOfMeasure)
     }
 
     return (
@@ -50,23 +55,25 @@ const FormFood = (props) => {
                 <FormControl>
                     <FormLabel className="label-medida"id="demo-row-radio-buttons-group-label">Forma de medida</FormLabel>
                     <RadioGroup
+                        onChange={(e) => setTypeOfMeasure(e.target.value)}
+                        value={typeOfMeasure}
                         row
                         aria-labelledby="demo-row-radio-buttons-group-label"
                         name="row-radio-buttons-group"
                     >
-                        <FormControlLabel value="female" control={<Radio />} label="mililitro(ml)" />
-                        <FormControlLabel value="male" control={<Radio />} label="Gramas(g)" />
+                        <FormControlLabel value="mililitro" control={<Radio />} label="mililitro(ml)" />
+                        <FormControlLabel value="Gramas" control={<Radio />} label="Gramas(g)" />
                     </RadioGroup>
                 </FormControl>
                 <NumberField
-                    obrigatorio={true}
-                    label='Calorias a cada 100g/100ml'
-                    placeholder='Informe a caloria do alimento a cada 100g ou 100ml'
+                    required={true}
+                    label={'Calorias a cada 100 ' + (typeOfMeasure === 'Gramas' ? 'g' : 'ml')}
+                    placeholder={'Informe as calorias do alimento a cada 100 ' + (typeOfMeasure === 'Gramas' ? 'g' : 'ml')}
                     value={calories}
                     whenChanged={value => setCalories(value)}
                 />
                 <TextInput
-                    obrigatorio={false}
+                    required={false}
                     label='Descrição'
                     placeholder='Crie uma breve descrição deste alimento'
                     value={description}

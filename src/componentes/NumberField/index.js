@@ -9,7 +9,7 @@ const NumberField = (props) => {
     return (
         <div className="number-field">
         <label>{props.label}</label>
-        <input type="number" value={props.value} onChange={whenTyping} required={props.obrigatorio} placeholder={props.placeholder}/>
+        <input type="number" value={props.value} onChange={whenTyping} required={props.required} placeholder={props.placeholder}/>
         </div>
     )
 }
