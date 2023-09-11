@@ -15,6 +15,7 @@ const FormFood = (props) => {
 
     const [name, setName] = useState('')
     const [calories, setCalories] = useState('')
+    const [amount, setAmount] = useState('')
     const [description, setDescription] = useState('')
     const [foodGroup, setFoodGroup] = useState(props.group[0].name)
     const [typeOfMeasure, setTypeOfMeasure] = useState('Gramas')
@@ -25,16 +26,18 @@ const FormFood = (props) => {
         props.whenRegisteringFood({
             name,
             calories,
+            amount,
             description,
             foodGroup,
             typeOfMeasure
         })
         setName('');
         setCalories('');
+        setAmount('');
         setDescription('');
         setFoodGroup(props.group[0].name);
         setTypeOfMeasure('Gramas');
-        console.log(name,calories,description,foodGroup,typeOfMeasure)
+        console.log(name,amount,calories,description,foodGroup,typeOfMeasure)
     }
 
     return (
@@ -61,6 +64,13 @@ const FormFood = (props) => {
                         <FormControlLabel value="Gramas" control={<Radio />} label="Gramas(g)" />
                     </RadioGroup>
                 </FormControl>
+                <NumberField
+                    required={true}
+                    label= 'Quantidade do alimento'
+                    placeholder={'Informe a quantidade do alimento em ' + (typeOfMeasure === 'Gramas' ? 'gramas' : 'mililitros')}
+                    value={amount}
+                    whenChanged={value => setAmount(value)}
+                />
                 <NumberField
                     required={true}
                     label={'Calorias a cada 100 ' + (typeOfMeasure === 'Gramas' ? 'g' : 'ml')}

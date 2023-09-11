@@ -17,3 +17,8 @@
     margin-top: 32px;
     flex-wrap: wrap;
 }
+
+.foodGroup p{
+    font-size: 24px;
+    font-weight: bold;
+}

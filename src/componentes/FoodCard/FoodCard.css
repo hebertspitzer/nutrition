@@ -3,8 +3,15 @@
 }
 
 .foodCard .header {
+    padding-top: 18px;
     background-color:  #F0F0F0;
+    height: 100px;
     border-radius: 10px 10px 0px 0px;
+    color: #000;
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 0;
 }
 .foodCard img {
     width: 100px;
@@ -17,7 +24,7 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 

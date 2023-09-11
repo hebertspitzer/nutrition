@@ -3,6 +3,7 @@ import Banner from './componentes/Banner';
 import FormFood from './componentes/FormFood';
 import FoodGroup from './componentes/FoodGroup';
 import Footer from './componentes/Footer';
+import TotalCalories from './componentes/TotalCalories';
 
 function App() {
 
@@ -54,6 +55,9 @@ function App() {
         group={group}
         foods={foods.filter(food => food.foodGroup === group.name)}
       />)}
+      <TotalCalories
+      foods={foods}
+      />
       <Footer/>
     </div>
   );

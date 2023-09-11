@@ -5,12 +5,12 @@ const FoodCard = (props) => {
     return(
         <div className='foodCard'>
             <div className='header' style={{backgroundColor: props.color}}>
-                <img src='https://github.com/hebertspitzer.png' alt='Hebert Spitzer'/>
+                <h4>{props.food.name}</h4>
             </div>
             <div className='footer'>
-                <h4>{props.food.name}</h4>
+                <h5>{props.food.amount + ' ' +(props.food.typeOfMeasure === 'Gramas' ? 'g' : 'ml')}</h5>
+                <h5>{'Calorias totais: ' + (props.food.amount * (props.food.calories/100))}</h5>
                 <h5>{props.food.description}</h5>
-                <h5>{props.food.calories + ' calorias a cada 100g/100ml'}</h5>
             </div>
         </div>
     )
