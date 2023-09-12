@@ -2,7 +2,7 @@ import './Button.css'
 
 const Button = (props) => {
     return (
-        <button className="button">{props.children}</button>
+        <button id={props.id} className="button">{props.children}</button>
     )
 }
 

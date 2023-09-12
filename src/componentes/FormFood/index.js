@@ -45,6 +45,7 @@ const FormFood = (props) => {
             <form onSubmit={whenSaving}>
                 <h2>Preencha os dados para criar o alimento</h2>
                 <TextInput
+                    id="nameOfFood"
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Informe o nome do alimento'
@@ -65,6 +66,7 @@ const FormFood = (props) => {
                     </RadioGroup>
                 </FormControl>
                 <NumberField
+                    id="amount"
                     required={true}
                     label= 'Quantidade do alimento'
                     placeholder={'Informe a quantidade do alimento em ' + (typeOfMeasure === 'Gramas' ? 'gramas' : 'mililitros')}
@@ -72,6 +74,7 @@ const FormFood = (props) => {
                     whenChanged={value => setAmount(value)}
                 />
                 <NumberField
+                    id="Calories"
                     required={true}
                     label={'Calorias a cada 100 ' + (typeOfMeasure === 'Gramas' ? 'g' : 'ml')}
                     placeholder={'Informe as calorias do alimento a cada 100 ' + (typeOfMeasure === 'Gramas' ? 'g' : 'ml')}
@@ -79,6 +82,7 @@ const FormFood = (props) => {
                     whenChanged={value => setCalories(value)}
                 />
                 <TextInput
+                    id="description"
                     required={false}
                     label='Descrição'
                     placeholder='Crie uma breve descrição deste alimento'
@@ -91,7 +95,7 @@ const FormFood = (props) => {
                     value={foodGroup}
                     whenChanged={value => setFoodGroup(value)}
                 />
-                <Button>Enviar</Button>
+                <Button id="send">Enviar</Button>
             </form>
         </section>
     )
